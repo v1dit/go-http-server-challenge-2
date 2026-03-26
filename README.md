@@ -41,7 +41,7 @@ Refactor is complete: session validation is now middleware-based, and ProfileHa
 * Ran gofmt on updated files
 * Ran go test ./... successfully
 * Checked lints on edited files: no issues
-Follows same arhcietructal rirection from challenge 1
+Follows same architectural direction from challenge 1 
 
 ## Run Locally
 
