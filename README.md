@@ -27,6 +27,18 @@ All endpoints are under the `/api/user` prefix:
 
 this separation keeps HTTP logic and business logic clean and testable
 
+### Changes
+Refactor is complete: session validation is now middleware-based, and ProfileHandler is focused on business logic only.
+* Added AuthMiddleware in internal/middleware/auth_middleware.go:
+* Reads X-Session-Token
+* Validates token 
+* Returns consistent 401/500 responses on auth failure
+* Stores authenticated user in request context
+* Updated ProfileHandler 
+* Updated route wiring in main.go:
+
+### Verification
+
 ## Run Locally
 
 ```bash
