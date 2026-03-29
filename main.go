@@ -12,6 +12,7 @@ import (
 
 func main() {
 	r := chi.NewRouter()
+	r.Use(middleware.LoggingMiddleware)
 
 	authService := service.NewAuthService()
 	authHandler := handlers.NewAuthHandler(authService)
